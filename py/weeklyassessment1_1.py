@@ -1,10 +1,10 @@
 import sqlite3
 
-con = sqlite3.connect('em.db')
+con = sqlite3.connect('em2.db')
 
 cursor = con.cursor()
 
-sq = '''CREATE TABLE employee (
+sq = '''CREATE TABLE employees (
     empCode INTEGER PRIMARY KEY,
     name TEXT,
     phone TEXT,

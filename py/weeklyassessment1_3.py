@@ -1,16 +1,16 @@
 import sqlite3
 
 
-con = sqlite3.connect('em.db')
+con = sqlite3.connect('em2.db')
 cursor = con.cursor()
 
-sqlit = "SELECT * FROM employee WHERE salary < AVG(salary) "
+sqlit = "SELECT * FROM employees ORDER BY name"
 
 cursor.execute(sqlit)
 
 rec = cursor.fetchall()
 print(rec)
-'''
+
 for i in rec:
     print('empcode  :', i[0])
     print('name:', i[1])
@@ -18,7 +18,7 @@ for i in rec:
     print('email :', i[3])
     print('designation :', i[4])
     print('salary :', i[5])
-    print('company name :', i[6])'''
+    print('company name :', i[6])
 con.commit()
 con.close()
 
